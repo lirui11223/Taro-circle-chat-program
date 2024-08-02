@@ -7,12 +7,12 @@ PORT = 65432        # 服务器端口
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
     while True:
-        msg = input('请输入信息: ')
-        if msg == '退出':
+        msg = input('Enter message: ')
+        if msg == 'exit':
             break
         s.sendall(msg.encode('utf-8'))
         data = s.recv(1024)
 
-        print('消息:', repr(data.decode('utf-8')))
-print('欢迎再次使用聊天程序')
+        print('Received', repr(data.decode('utf-8')))
+print('Welcome to the chat program again')
 time.sleep(10)
