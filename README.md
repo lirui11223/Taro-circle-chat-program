@@ -17,7 +17,7 @@ English(英文)
 
 One. Introduction
 
-This is my open source program - Taro chat program, this program allows you to chat with friends, relatives, roommates in the same LAN, so that you can have a chat.
+This is my open source program - Taro circle chat program, this program allows you to chat with friends, relatives, roommates in the same LAN, so that you can have a chat.
 
 Two. Use method
 
