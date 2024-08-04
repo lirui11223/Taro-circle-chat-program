@@ -8,10 +8,10 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.listen()
     conn, addr = s.accept()  # 等待客户端连接
     with conn:
-        print('Connected by', addr)
+        print('Connected by(连接)', addr)
         while True:
             data = conn.recv(1024).decode()
             if not data:
                 break
-            print('Received', repr(data))
+            print('Received(消息)', repr(data))
             conn.sendall(data.encode() + b'\n')  # 发送回客户端
